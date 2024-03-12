@@ -1,0 +1,20 @@
+<div class="mb-5 fs-1 m-3">
+  <h1>Stupid Coaching</h1>
+</div>
+
+
+<div class="m-2 w-75">
+  <div class="card-body p-3 mb-4 m-2 p-2 text-dark bg-opacity-25 border-start border-5">
+    <h5 class="card-title fs-3"><%=@question  %></h5>
+    <p class="card-text fs-4 fst-italic">-You</p>
+  </div>
+</div>
+
+<div class=" m-2 w-75">
+  <div class="card-body p-3 m-2 bg-warning p-2 text-dark bg-opacity-10 border-start border-5">
+    <h5 class="card-title fs-3 fw-bold"><%=@answer  %></h5>
+    <p class="card-text fs-4 fst-italic">-Your coach</p>
+  </div>
+</div>
+
+<button type="button" style="text-decoration:none" class="m-3 btn btn-outline-info"><%= link_to "Ask more question", ask_path %></button>
