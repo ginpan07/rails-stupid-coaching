@@ -4,12 +4,13 @@
 
 <p class="m-3">Ask your coach anything: </p>
 <form action="/answer" data-turbo="false">
-  <div class="input-group m-3">
+  <div class="input-group m-3 w-50">
     <input type="text" width="100px" class="form-control" name="question" value="<%= params[:question]%>">
+     <button type="submit" class="btn btn-primary">Ask!</button>
   </div>
-  <div class="input-group m-3">
-    <button type="submit" class="btn btn-primary">Ask!</button>
-  </div>
+
+
+
   <%# <input type="submit" value="Ask!"> %>
 
 </form>
