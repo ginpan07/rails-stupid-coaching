@@ -20,11 +20,25 @@ class QuestionsTest < ApplicationSystemTestCase
     assert_text "I don't care, get dressed and go to work!"
   end
 
-  # test "asking question yields a rude response from the coach" do
-  #   visit ask_url
-  #   fill_in "question", with: "?"
-  #   click_on "Ask"
+  test "asking question yields a rude response from the coach" do
+    visit ask_url
+    fill_in "question", with: "Hello?"
+    click_on "Ask"
 
-  #   assert_text "Silly question, get dressed and go to work!"
-  # end
+    assert_text "Silly question, get dressed and go to work!"
+  end
+
+  test "asking question yields a friendly response from the coach" do
+    visit ask_url
+    fill_in "question", with: "I am going to work"
+    click_on "Ask"
+
+    assert_text "Great!"
+  end
+
+  test "directing back to ask url after clicking the link" do
+    visit answer_url
+    click_link('Ask more question')
+    assert_selector "p", text: "Ask your coach anything"
+  end
 end
